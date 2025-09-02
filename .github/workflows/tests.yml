@@ -1,8 +1,8 @@
 name: Python Tests
 
 on:
-  pull_request:        # Lance les tests automatiquement sur chaque PR
-  workflow_dispatch:   # Permet un lancement manuel via l’onglet Actions
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
