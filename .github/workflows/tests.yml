@@ -24,7 +24,7 @@ jobs:
 
       - name: Run tests with coverage and HTML report
         run: |
-          pytest --maxfail=1 --disable-warnings --cov=python_accounting_app --html=report.html --self-contained-html
+          PYTHONPATH=. pytest --maxfail=1 --disable-warnings --cov=python_accounting_app --html=report.html --self-contained-html
           coverage html
 
       - name: Upload HTML report
