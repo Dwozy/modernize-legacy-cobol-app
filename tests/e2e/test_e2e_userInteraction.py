@@ -11,12 +11,12 @@ def test_full_user_journey(monkeypatch, capsys):
         "50.00",  # Debit amount
         "4"       # Exit
     ])
-    monkeypatch.setattr(builtins, "input", lambda _: next(inputs))
+    monkeypatch.setattr(builtins, "input", lambda *args: next(inputs))
     main.run()
     output = capsys.readouterr().out
-    assert "Current balance: 1000.00" in output
-    assert "Amount credited. New balance: 1100.00" in output
-    assert "Amount debited. New balance: 1050.00" in output
+    assert "Current balance: 001000.00" in output
+    assert "Amount credited. New balance: 001100.00" in output
+    assert "Amount debited. New balance: 001050.00" in output
     assert "Exiting the program. Goodbye!" in output
 
 def test_debit_insufficient(monkeypatch, capsys):
@@ -25,7 +25,7 @@ def test_debit_insufficient(monkeypatch, capsys):
         "2000.00",# Debit amount
         "4"       # Exit
     ])
-    monkeypatch.setattr(builtins, "input", lambda _: next(inputs))
+    monkeypatch.setattr(builtins, "input", lambda *args: next(inputs))
     main.run()
     output = capsys.readouterr().out
     assert "Insufficient funds" in output

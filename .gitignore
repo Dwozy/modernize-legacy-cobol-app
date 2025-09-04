@@ -1,11 +1,55 @@
-# cobol compiled files
-*.o
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdm.toml
+*.pdm.lock
+*.env
+.env
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+.python-version
 
-# cobol accountsystem program
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Cobol compiled files
+*.o
 accountsystem
 
-# node_modules
+# Node.js
 node_modules/
+node-accounting-app/
 
-# node-accounting-app
-node-accounting-app/*
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Artifacts & reports
+*.html
+report.html
+
+# GitHub Actions artifacts
+coverage-html/
+pytest-report/
+
+# Misc
+*.bak
+*.swp
+*~
